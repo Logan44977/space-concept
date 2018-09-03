@@ -11,7 +11,7 @@ class PlanetText extends Component{
     }
 
     tick(){
-        if(this.state.seconds < 20){
+        if(this.state.seconds < 14){
             let rng = Math.floor(Math.random() * planets.length);
 
             this.setState(prevState => ({

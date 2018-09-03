@@ -1,0 +1,102 @@
+.astronaut
+    position: fixed;
+    top: 300px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 240px;
+    overflow-y: hidden;
+    opacity: 0;
+
+    &-holder
+        position: relative;
+
+
+    &-background
+        border-radius: 50%;
+        background-color: #333;
+        height: 213px;
+        width: 180px;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        z-index: 0;
+
+    &-planet
+        position: absolute;
+        top: 120px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: center;
+        opacity: 0;
+
+        &-hidden
+            position: absolute;
+            top: 92px;
+            z-index: 25;
+            background: #fff;
+            height: 50px;
+            width: 100%;
+
+    &-img
+        &-planet
+            width: 150px;
+            z-index: 20;
+        &-helmet
+            width: 250px;
+            z-index: 50;
+            position: relative;
+
+
+.slide-in-bottom
+	-webkit-animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s forwards;
+	animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s forwards;
+
+
+.appear
+    animation: planet-appear 1.3s forwards;
+    -webkit-animation: planet-appear 1.3s forwards;
+    animation-delay: 2.2s;
+
+
+@-webkit-keyframes slide-in-bottom 
+  0% 
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  
+  100% 
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+
+
+@keyframes slide-in-bottom 
+  0% 
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  
+  100% 
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  
+
+@-webkit-keyframes planet-appear
+    0%
+        opacity: 0;
+    100%
+        opacity: 1;
+
+@keyframes planet-appear
+    0%
+        opacity: 0;
+    100%
+        opacity: 1;
+
