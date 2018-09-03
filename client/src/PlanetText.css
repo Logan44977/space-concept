@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
+.planetText {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; }
+  .planetText-p-planet {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 70px;
+    color: grey;
+    letter-spacing: 13px;
+    margin: 0;
+    font-weight: 100;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif; }
