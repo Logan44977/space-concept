@@ -1,0 +1,113 @@
+html
+    height: 100vh !important;
+
+
+.planetslider
+    opacity: 0;
+    position: fixed;
+    bottom: -180px;
+    width: 100vw;
+
+    &-circle
+        margin: auto;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: #fff;
+        border: 3px solid #dbdbdb;
+
+    &-holder
+        &-text
+            position: fixed;
+            bottom: 35px;
+            text-align: center;
+            width: 100vw;
+
+        &-arrows
+            position: fixed;
+            bottom: 150px;
+            width: 250px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            justify-content: center;
+
+    &-arrow
+        &-left
+            float: left;
+            width: 30px;
+        &-right
+            float: right;
+            width: 30px;
+    
+    &-text
+        &-planet
+            color: #cccccc;
+            letter-spacing: 1.4px;
+            font-size: 18px;
+            font-weight: 300;
+
+
+    &-planet
+
+        &-earth
+            position: fixed;
+            background: #4e9ce0;
+            height: 33px;
+            width: 33px;
+            border-radius: 50%;
+            bottom: 125px;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            &-moon
+                position: fixed;
+                background: #878787;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                bottom: 135px;
+                left: 0;
+                right: 0;
+                margin: auto;
+
+.moon-orbit-earth
+    animation: moon-orbit-earth 2s linear infinite;
+    -webkit-animation: moon-orbit-earth 2s linear infinite;
+
+
+@keyframes moon-orbit-earth
+  0%
+    transform: rotate(0deg) translateX(40px) rotate(0deg)
+
+  100%
+    transform: rotate(360deg) translateX(40px) rotate(-360deg)
+
+@-webkit-keyframes moon-orbit-earth
+  0%
+    transform: rotate(0deg) translateX(40px) rotate(0deg)
+
+  100%
+    transform: rotate(360deg) translateX(40px) rotate(-360deg)
+
+
+.planetslider-appear
+    animation: planetslider-appear 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
+    -webkit-animation: planetslider-appear 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) forwards;
+    animation-delay: 3s;
+
+@-webkit-keyframes planetslider-appear 
+  0% 
+    opacity: 0;
+  100% 
+    opacity: 1;
+
+@keyframes planetslider-appear
+  0% 
+    opacity: 0;
+  
+  100%
+    opacity: 1;
+
+    
